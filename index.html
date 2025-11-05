@@ -217,7 +217,7 @@
   <div id="jupiter-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Trade Crypto</h2>
+        <h2>Trade Stocks</h2>
         <button class="close-button" onclick="closeJupiterModal()">&times;</button>
       </div>
       <div id="target-container"></div>
@@ -347,8 +347,8 @@
       // Only fetch tokens that have CoinGecko IDs
       const tokensWithCoinIds = TOKENS.filter(token => token.coinId !== null);
       
-      // Split into smaller batches (5 tokens per batch)
-      const batches = chunkArray(tokensWithCoinIds, 5);
+      // Split into smaller batches (3 tokens per batch)
+      const batches = chunkArray(tokensWithCoinIds, 3);
       
       for (let i = 0; i < batches.length; i++) {
         const batch = batches[i];
