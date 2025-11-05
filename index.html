@@ -347,8 +347,8 @@
       // Only fetch tokens that have CoinGecko IDs
       const tokensWithCoinIds = TOKENS.filter(token => token.coinId !== null);
       
-      // Split into smaller batches (3 tokens per batch)
-      const batches = chunkArray(tokensWithCoinIds, 3);
+      // Split into smaller batches (1 tokens per batch)
+      const batches = chunkArray(tokensWithCoinIds, 1);
       
       for (let i = 0; i < batches.length; i++) {
         const batch = batches[i];
@@ -356,7 +356,7 @@
         
 
         if (i < batches.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 5000));
+          await new Promise(resolve => setTimeout(resolve, 1000));
         }
       }
       
